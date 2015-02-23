@@ -1,0 +1,128 @@
+<?php
+
+/*
+ * Classe controladorJava
+ */
+class controladorJava
+{
+	/*
+	 * Variaveis
+	 */
+	private $results;
+	private $conteudo;
+	
+	public function setConteudo($conteudo)
+	{
+		$this->conteudo = $conteudo;
+	}
+	
+	/*
+	 * Método contrutor
+	 */
+	public function __construct()
+	{
+		$this->results		= NULL;
+		$this->conteudo	= NULL;
+	}
+
+	/*
+	 * Método getConteudo
+	 * Obtem o conteudo cadastrado no site
+	 */
+	public function getConteudo() 
+	{
+		//RECUPERA CONEXAO BANCO DE DADOS
+		TTransaction::open('my_bd_site');
+
+		//TABELA exposition_gallery
+		$criteria	= new TCriteria;
+		//$criteria->setProperty('order', 'nome ASC');
+
+		// instancia a instrução de SELECT
+		$sql = new TSqlSelect;
+		$sql->addColumn('conteudo');
+
+		$sql->setEntity('desenvolvedorjava');
+
+		//  atribui o critério passado como parâmetro
+		$sql->setCriteria($criteria);
+
+		// obtém transação ativa
+		if ($conn = TTransaction::get())
+		{	
+			// registra mensagem de log
+			TTransaction::log($sql->getInstruction());
+
+			// executa a consulta no banco de dados
+			$result = $conn->Query($sql->getInstruction());
+			$this->results = array();
+
+			if ($result)
+			{ 	
+				// percorre os resultados da consulta, retornando um objeto
+				while ($row = $result->fetchObject())
+				{
+					// armazena no array $this->results;
+					$this->results[] = $row;
+				}
+			}
+		}
+
+		TTransaction::close();
+
+		$this->conteudo = $this->results[0]->conteudo;
+		return $this->conteudo;
+	}
+	
+	/*
+	 * Método updateConteudo
+	 * Inicia procedimento de alteração do conteudo
+	 */
+	public function updateConteudo()
+	{
+		if($this->update())
+			return true;
+		else
+			return false;
+	}
+	
+	/*
+	 *Método Update
+	 * Atualiza o banco de dados 
+	 */
+	private function update()
+	{
+		try
+		{
+			//Inicia Transação com banco de dados
+			TTransaction2::open('my_bd_site');
+
+			//Cria instrução INSERT
+			$sql = new TSqlUpdate;
+			//Define entidade
+			$sql->setEntity('desenvolvedorjava');
+
+			//Cria um critério de seleção pelo ID
+			$criteria = new TCriteria;
+			$criteria->add(new TFilter('codigo', '=', 1));
+			$sql->setCriteria($criteria);
+
+			//Atribui o valor a cada coluna
+			$sql->setRowData('conteudo',  $this->conteudo);
+
+			//Obtem a conexão ativa
+			$conn   = TTransaction2::get();
+			//Executa Instrução SQL
+			$result = $conn->Query($sql->getInstruction());
+
+			TTransaction2::close();
+
+			return true;
+		}
+		catch (Exception $e)
+		{
+			return false;
+		}
+	}
+}
+?>

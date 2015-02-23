@@ -1,0 +1,61 @@
+body
+{
+	background-color: 	#000000;
+	margin: 			0%;
+	padding: 			0%;
+	overflow: 			hidden;
+	background-image:	url('../../../app.view/img/template/fundo.jpg');
+	background-size:	100%, 100%;
+	text-align:		center;
+	height:			100%;
+	width:			100%;
+}
+
+div.contentLogin
+{
+	position:		absolute;
+	
+	top:			50%;
+	left:			50%;
+	margin-top:	-6%;
+	margin-left:	-6%;
+	
+	font-family: 	'Shadows Into Light', 'cursive';
+	font-size: 	400%;
+	line-height:	80%;
+	color:		#cbcbcb;	
+}
+
+form.loginForm #campo
+{
+	width:			100%;
+	font-family:		'Open Sans Condensed', 'sans-serif';
+	font-size:			30%;
+	border-color:		#cbcbcb;
+	color:			#cbcbcb;
+	background-color:	#000000;
+}
+form.loginForm #campo:hover
+{
+	border-color:	#03b932;
+	border-width:	2px;
+}
+form.loginForm #campo:focus
+{
+	outline: 0;
+	border-color: red;
+}
+
+form.loginForm input[type=submit] 
+{
+	padding:				5px 15px; 
+	background:			#ccc; 
+	border:				0 none;
+	cursor:				pointer;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius:		10px;
+	border-radius: 			10px;
+	font-family:			'Open Sans Condensed', 'sans-serif';
+	font-size:				25%;
+	text-decoration:		underline;
+}

@@ -1,0 +1,72 @@
+div.contatoContent
+{
+	position: 			relative;
+	height: 			100%;
+	width: 			100%;
+	color: 			#06202b;
+	font-family:		'Coming Soon', cursive;
+	font-size: 		140%;
+	overflow:			hidden;
+	font-weight:		700;
+	text-align:		left;
+}
+
+table.contatoTable
+{
+	margin: 	0px;
+	width: 	400px;
+	height: 	500px;
+}
+
+table.contatoTable #titulo
+{
+	font-size:			200%;
+	text-align: 		center;
+	text-decoration:	underline;
+}
+
+form.contatoForm #campo
+{
+	width: 			98%;
+	font-family:		'Open Sans Condensed', sans-serif;
+	font-size: 		70%;
+	border-color:		#cbcbcb;
+}
+form.contatoForm #campo:hover
+{
+	border-color: #177eac;
+	border-width: 2px;
+}
+form.contatoForm #campo:focus
+{
+	outline:		0;
+	border-color:	#06202b;
+}
+
+form.contatoForm input[type='submit'] 
+{
+	padding:				5px 15px; 
+	background:			white; 
+	border:				0 none;
+	cursor:				pointer;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius:		10px;
+	border-radius: 			10px;
+	font-family:			'Open Sans Condensed', sans-serif;
+	font-size:				65%;
+	text-decoration:		underline;
+}
+
+form.contatoForm input[type='reset'] 
+{
+	padding:				5px 15px; 
+	background:			white; 
+	border:				0 none;
+	cursor:				pointer;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius:		10px;
+	border-radius: 			10px;
+	font-family:			'Open Sans Condensed', sans-serif;
+	font-size:				65%;
+	text-decoration:		underline;
+}

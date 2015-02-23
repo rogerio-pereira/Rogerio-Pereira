@@ -1,0 +1,12 @@
+div.socialBox
+{
+	position:		relative;
+	display: 		inline;
+	padding-left: 	1%;
+	padding-right: 	1%;
+}
+
+div.socialBox img
+{
+	width: 7%;
+}

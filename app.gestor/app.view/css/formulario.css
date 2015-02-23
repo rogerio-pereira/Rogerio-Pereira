@@ -1,0 +1,102 @@
+form
+{
+	color: 			#cbcbcb;
+	font-family: 		'Shadows Into Light', 'cursive';
+}
+
+#titulo
+{
+	font-size:			200%;
+	text-align: 		center;
+	text-decoration:	underline;
+	font-family: 		'Shadows Into Light', 'cursive';
+}
+
+#titulo2
+{
+	font-size:			140%;
+	text-align: 		center;
+	text-decoration:	underline;
+	font-family: 		'Shadows Into Light', 'cursive';
+}
+
+#campo
+{
+	width: 			98%;
+	font-family:		'Open Sans Condensed', 'sans-serif';
+	font-size: 		90%;
+	border-color:		#cbcbcb;
+	color:			#cbcbcb;
+	background-color:	#000000;
+}
+#campo:hover
+{
+	border-color: #03b932;
+	border-width: 2px;
+}
+#campo:focus
+{
+	outline:		0;
+	border-color:	red;
+}
+
+#campo:disabled
+{
+	border-color:		#313131;
+	background-color:	#313131;
+}
+
+input[type='submit'] 
+{
+	padding:				5px 15px; 
+	background:			#cbcbcb; 
+	border:				0 none;
+	cursor:				pointer;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius:		10px;
+	border-radius: 			10px;
+	font-family:			'Open Sans Condensed', 'sans-serif';
+	font-size:				80%;
+	text-decoration:		underline;
+}
+
+input[type='reset'] 
+{
+	padding:				5px 15px; 
+	background:			#ccc; 
+	border:				0 none;
+	cursor:				pointer;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius:		10px;
+	border-radius: 			10px;
+	font-family:			'Open Sans Condensed', 'sans-serif';
+	font-size:				80%;
+	text-decoration:		underline;
+}
+
+select
+{
+	-webkit-border-radius: 	10px;
+	-moz-border-radius:		10px;
+	border-radius: 			10px;
+	
+	font-family:			'Open Sans Condensed', 'sans-serif';
+	font-size:				90%;
+	border-color:			#cbcbcb;
+	color:				#cbcbcb;
+	background-image:		url(../../app.view/img/template/seta.png);
+	background-position:	right;
+	background-color:		#000000;
+	background-repeat:		no-repeat;
+}
+
+select:hover
+{
+	border-color: #03b932;
+	border-width: 2px;
+}
+select:focus
+{
+	outline:		0;
+	border-color:	red;
+}

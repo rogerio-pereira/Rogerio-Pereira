@@ -1,0 +1,57 @@
+div.homeContent
+{
+	position: relative;
+	height:	100%;
+	width:	100%;
+	display: inline;
+}
+
+div.homeBox
+{
+	position:			relative;
+	padding-top:		1%;
+	width:			20%;
+	float:			left;
+	overflow:			hidden;
+	padding-right:		5%;
+}
+
+div.homeBoxContent
+{
+	color:						#cbcbcb;
+	
+	-webkit-border-top-left-radius:		20px;
+	-webkit-border-top-right-radius:		20px;
+	-moz-border-radius-topleft:		20px;
+	-moz-border-radius-topright:		20px;
+	border-top-left-radius:			20px;
+	border-top-right-radius:			20px;
+	
+	padding-left:					2%;
+}
+
+#normal
+{
+	background-color:				#760305;
+}
+
+#sistema
+{
+	background-color:				#017a1d;
+}
+
+#conteudo
+{
+	background-color:				#8d8813;
+}
+
+#curriculum
+{
+	background-color:				#022a67;
+}
+
+div.homeBoxContent h1
+{
+	color:			#cbcbcb;
+	padding-bottom:	2%;
+}
