@@ -11,4 +11,4 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - apt-get update
           - apt-get -qq install git-ftp
-          - git ftp init -v --user $FTP_Username --passwd $FTP_Password ftp://rogeriopereira.info/public_html/
+          - git ftp init -v --user $FTP_Username --passwd $FTP_Password $FTP_Server/public_html/ --insecure
